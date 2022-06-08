@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    #url: jdbc:postgresql://free-tier6.gcp-asia-southeast1.cockroachlabs.cloud:26257/wet-ragdoll-2746.defaultdb?sslmode=verify-full&sslrootcert=/Users/User/AppData/Roaming/postgresql/root.crt
+    url: jdbc:postgresql://free-tier6.gcp-asia-southeast1.cockroachlabs.cloud:26257/wet-ragdoll-2746.defaultdb?sslmode=verify-full&sslrootcert=/home/ec2-user/.postgresql/root.crt
+    username: nsoh
+    password: mI3ztsz9EKi2gctv2a03bQ
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-test-query: SELECT 1
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.CockroachDB201Dialect
+        check_nullability : true
+        format_sql : true
+    show-sql: true
